@@ -1,6 +1,7 @@
 import hexchat
 import threading
 import time
+import random
 
 TEXT_EVENT = 'Channel Message'
 DUCK_BOT = 'gonzobot'
@@ -13,7 +14,8 @@ __module_description__ = 'Befriend that pesky duck'
 
 
 def say():
-    time.sleep(2)
+    sleep_delay = random.randint(4, 15)
+    time.sleep(sleep_delay)
     hexchat.command('say .bef')
 
 
