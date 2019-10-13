@@ -29,6 +29,6 @@ def print_callback(words, eol, userdata):
 
 
 hexchat.prnt('Setting hook for duck hunter...')
-hexchat.hook_print('Channel Message', print_callback)
+hexchat.hook_print(TEXT_EVENT, print_callback)
 hexchat.prnt('Hook set')
 
