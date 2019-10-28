@@ -15,11 +15,13 @@ __module_description__ = 'Befriend that pesky duck'
 
 
 def say(channel):
+    channel_context = hexchat.find_context(channel=channel)
+
     sleep_delay = random.randint(4, 15)
     time.sleep(sleep_delay)
 
     command = 'msg {} .bef'.format(channel)
-    hexchat.command(command)
+    channel_context.command(command)
 
 
 def print_callback(words, eol, userdata):
